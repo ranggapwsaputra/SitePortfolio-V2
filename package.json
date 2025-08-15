@@ -9,11 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "framer-motion": "^10.6.0",
-    "next": "14.2.10",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@tailwindcss/typography": "^0.5.16",
+    "@upstash/redis": "^1.35.3",
+    "framer-motion": "^10.18.0",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
+    "next": "^14.2.10",
+    "next-mdx-remote": "^5.0.0",
+    "prism-themes": "^1.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "reading-time": "^1.5.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-stringify": "^10.0.1",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.2",
+    "remark-slug": "^7.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "3.2"
   }
 }

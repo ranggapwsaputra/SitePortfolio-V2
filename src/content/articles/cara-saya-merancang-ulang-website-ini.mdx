@@ -1,0 +1,221 @@
+---
+title: "Cara Saya Merancang Ulang Website Ini"
+date: "August 07, 2025"
+description: "Kali Ini Saya Ingin Sharing Sedikit Bagaimana Saya Merombak Ulang dari Nol Menjadi Seperti Sekarang dengan Stack Modern: React, Next.js, dan MDX"
+category: [Web Development]
+tags: [React.js, Next.js, Tailwind CSS, MDX, Motion.dev]
+coverImage: "/images/articles/ubahwebsite.png"
+slug: "cara-saya-merancang-ulang-website-ini"
+---
+
+import { StackIcon, FaReact, SiNextdotjs, SiTailwindcss } from '@/components/mdx/MDXComponents';
+
+### Hello bruh, welcome to the new face! 👋
+Setelah sebelumnya website saya sempat vakum di domain ranggapwsaputra.id (karena... yaa, lupa perpanjang domain 😅), kali ini saya kembali dengan wajah baru! Di artikel ini, saya ingin berbagi cerita tentang "Cara Saya Merancang Ulang Website Ini".
+Walaupun versi lama dari website ini masih tersimpan aman di GitHub, untuk domain baru ini saya ingin membangunnya ulang dari nol dan mendesain ulang tampilannya supaya lebih eye-catching. Ciyee, sok keren ya~ 🤭
+**Oh ya, berikut adalah tampilan website versi sebelumnya:**
+
+<ImageWithCaption
+  src="/images/articles/web2.png"
+/>
+
+### Kenapa Di Rombak Ulang?
+Karena bosan, hahaha. Ya selain bosan saya merombak website ini bukan cuma soal tampilan, tapi lebih ke keinginan untuk membuat sesuatu yang terasa lebih fresh aja gitu, dan tentunya sekalian saya untuk belajar dan bereksperimen lagi.
+Jadi guys, Menurut saya, membangun website pribadi itu bukan cuma soal "Yang Penting Punya Website", tapi juga jadi ruang eksplorasi, kreativitas, dan dokumentasi perkembangan diri secara teknikal. Makanya, saya mencoba membangun ulang semuanya dari awal—dengan stack modern yang bikin prosesnya makin seru!
+________________________________________
+
+## Stack
+Berikut adalah teknologi yang saya pakai dalam pembuatan website ini:
+
+<div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-5 gap-2 mt-4">
+<StackIcon icon="react" label="React.js" />
+<StackIcon icon="next" label="Next.js" />
+<StackIcon icon="tailwind" label="TailwindCSS" />
+<StackIcon icon="mdx" label="MDX" />
+<StackIcon icon="motion" label="Motion.dev" />
+</div>
+
+## React.js
+React memberikan fleksibilitas tinggi dalam membangun antarmuka web, terutama dalam menyusun komponen UI yang interaktif dan reusable. Cocok banget buat bikin website yang modular dan scalable.
+
+## Next.js
+Sebagai framework di atas React, Next.js sangat powerful dan cocok buat proyek web modern. Salah satu fitur favorit saya adalah file-system based routing, yang bikin struktur halaman jadi rapi dan mudah dikelola. 
+Karena Next.js memanfaatkan konsep file-system based routing, sehingga kita cukup membuat folder dan file di dalam direktori app untuk secara otomatis menghasilkan route yang sesuai. 
+
+```jsx
+PORTFOLIO-V2
+├── public/
+│   ├── images/				// image folder 👈
+│   │   ├── articles/
+│   │   ├── profile/
+│   │   ├── projects/
+│   │   └── svgs/
+│   ├── circle-text.png
+│   ├── dummy.pdf
+├── src/
+│   └── components/
+│       ├── hooks/
+│       │   └── ThemeSwitcher.js
+│       ├── mdx/						
+│       │   ├── Callout.jsx
+│       │   ├── ImageWithCaption.js
+│       │   └── mdxComponents.js
+│       ├── AnimatedText.js
+│       ├── ArticleBannerImage.js
+│       ├── AuthorPostCard.js
+│       ├── ContactMe.js
+│       ├── Education.js
+│       ├── EffectTransition.js
+│       ├── Experience.js
+│       ├── Footer.js
+│       ├── Icons.js
+│       ├── Layout.js
+│       ├── LightExperience.js
+│       ├── Logo.js
+│       ├── NavBar.js
+│       ├── Sidebar.js
+│       └── Skills.js
+├── content/
+│   └── articles/			// direktori file-file mdx untuk content artikel 👈
+│       ├── artikel-1.mdx
+│       ├── artikel-2.mdx
+│       ├── artikel-3.mdx
+│       └── artikel-4.mdx
+├── lib/
+│   ├── mdx.js
+│   └── redis.js
+├── pages/
+│   ├── articles/      // Page list artikel 👈
+|	    ├── [slug].js
+|	    └── index.js
+│   ├── categories/
+│   ├── _app.js
+│   ├── _document.js
+│   ├── about.js
+│   ├── index.js
+│   └── projects.js
+├── styles/
+│   ├── globals.css
+│   └── Home.module.css
+├── jsconfig.json
+├── next.config.js
+└── tailwind.config.js
+```
+
+
+
+Diatas adalah struktur pada folder website ini, yang setiap bagian memiliki peran yang jelas: file **index.js** di dalam folder articles berfungsi sebagai halaman utama yang menampilkan daftar seluruh artikel, 
+sedangkan **[slug].js** digunakan untuk menampilkan detail setiap artikel berdasarkan slug yang unik. Dan seluruh konten artikel disimpan terpisah di dalam folder content/articles dalam format file MDX, sehingga pengelolaan dan penambahan artikel baru menjadi sangat mudah.
+
+## Tailwind CSS
+Untuk urusan styling, saya menggunakan Tailwind CSS—utility-first CSS framework yang bikin proses desain UI jadi lebih cepat dan konsisten. Cukup tulis class langsung di className, tanpa harus ribet bikin file CSS terpisah untuk setiap komponen.
+
+## Motion.dev
+Untuk membuat tampilan lebih hidup dan modern, saya menambahkan animasi menggunakan motion.dev. Library ini memudahkan saya dalam menambahkan transisi antar elemen, animasi saat komponen muncul, dan efek interaksi kecil yang bikin pengalaman pengguna lebih menyenangkan.
+
+## MDX
+Ini bagian paling menarik: saya memakai MDX untuk menulis konten blog. 
+Menjadi solusi yang sangat powerful untuk mengelola konten di Next.js, karena memungkinkan kita menulis artikel dengan sintaks markdown sekaligus menyisipkan komponen React secara langsung di dalamnya. Dengan integrasi MDX pada app router Next.js setiap file MDX dapat diperlakukan layaknya sebuah halaman atau bagian dari aplikasi, sehingga sangat fleksibel untuk kebutuhan blog, dokumentasi, maupun konten interaktif lainnya.
+Dan juga Next.js menyediakan dukungan penuh untuk custom komponen, layout, dan bahkan penggunaan server components di dalam file MDX, sehingga kita bisa membuatnya benar-benar dinamis dan modern.
+
+Update file *next.config.ts* di root direktori project untuk menggunakan MDX:
+
+
+```jsx
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
+
+const nextConfig = {
+  reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'], // 👈 penting: agar .mdx dianggap halaman
+};
+
+module.exports = withMDX(nextConfig);
+```
+
+Lalu saya membuatkan fungsi untuk membaca seluruh file mdx yang ada didalam folder **/articles/** dan nentuin daftar slug apa aja yang mau di-pre-render :
+
+```jsx
+export async function getStaticPaths() {
+  const dir = path.join(process.cwd(), 'src/content/articles');
+  const files = fs.readdirSync(dir);
+
+  const paths = files
+    .filter((file) => file.endsWith('.md') || file.endsWith('.mdx'))
+    .map((filename) => ({
+      params: { slug: filename.replace(/\.mdx?$/, '') },
+    }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+```
+
+
+Dan kemudian saya petakan setiap file mdx kedalam sebuah object dengan key berupa slug (hasil slugify dari title/metadata) dan value berupa isi file beserta metadatanya.
+
+```jsx
+export async function getStaticProps({ params }) {
+  const articlesDir = path.join(process.cwd(), 'src/content/articles');
+  
+  let filePath = path.join(articlesDir, ${params.slug}.mdx);
+  if (!fs.existsSync(filePath)) {
+    filePath = path.join(articlesDir, ${params.slug}.md);
+  }
+
+  if (!fs.existsSync(filePath)) {
+    throw new Error(Article not found for slug: ${params.slug});
+  }
+
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const { data, content } = matter(fileContent);
+ 
+  const mdxSource = await serialize(content, {
+  scope: data,
+  mdxOptions: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypeHighlight],
+    format: 'mdx',
+  },
+});
+```
+
+Untuk halaman list blog saya menyediakan fungsi tersendiri untuk meload keseleuruhan file mdx yang ada dalam folder ***/articles/***.
+
+```jsx
+const articles = files
+    .filter((filename) => filename.endsWith('.md') || filename.endsWith('.mdx'))
+    .map((filename) => {
+      const slug = filename.replace(/\.mdx?$/, '');
+      const fileContent = fs.readFileSync(path.join(articlesDir, filename), 'utf-8');
+      const { data, content } = matter(fileContent);
+      const readingTime = calculateReadingTime(content);
+
+      return {
+        slug,
+        frontmatter: {
+          ...data,
+          readingTime,
+        },
+      };
+    });
+
+  const sorted = articles.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+
+  return {
+    props: {
+      articles: sorted,
+    },
+  };
+}
+```
+
+<Callout>
+
+Jadi saya membangun website ini berbasis statis dengan stack modern Next.js, MDX, dan Tailwind CSS karena memberikan banyak kemudahan dan fleksibilitas, dari pengembangan tata kelola konten. Ditambah juga untuk integrasi MDX itu cukup dinamis. Website yang dihasilkan juga tidak hanya mudah di kembangkan, tetapi juga memberikan pengalaman pengguna yang interaktif dan seru.
+
+</Callout>
