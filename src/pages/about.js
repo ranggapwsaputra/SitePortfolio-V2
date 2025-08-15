@@ -57,10 +57,10 @@ const About = () => {
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">Hey, I'm Rangga.</h2>
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">I&apos;m Rangga</h2>
 
               <p className="font-medium">
-                I am a Head of IT with a specialization in network, programming, and cyber security.
+                  I am a Head of IT with a specialization in network, programming, and cyber security.
               </p>
 
               <p className="my-4 font-medium">
