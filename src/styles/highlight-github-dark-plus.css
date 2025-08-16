@@ -3,7 +3,7 @@
   display: block;
   overflow-x: auto;
   padding: 0.75em 1em;
-  background: transparent; /* transparan, no solid color */
+  background: #052236; /* transparan, no solid color */
   color: #c9d1d9;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 0.9rem; /* sedikit lebih kecil */
