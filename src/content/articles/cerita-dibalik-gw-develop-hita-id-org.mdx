@@ -1,0 +1,399 @@
+---
+title: "Cerita Dibalik Gw Develop hita-id.org"
+date: "March 14, 2026"
+description: "02.15 pagi bingung mau ngapain, mending gw nulis dah gimana gw membangun web system HITA Indonesia dari nol — mulai dari dijebak lewat chat sampai deploy production dengan stack yang bukan kaleng-kaleng"
+category: [Web Development]
+tags: [React.js, Next.js, AI Agent, HITA.ID, Supabase]
+coverImage: "/images/articles/webhitaid.png"
+slug: "cerita-dibalik-gw-develop-hita-id-org"
+---
+
+import { StackIcon, FaReact, SiNextdotjs, SiTailwindcss } from '@/components/mdx/MDXComponents';
+ 
+## Balik ke Jakarta Setelah 4 Tahun Bertapa di Banten
+ 
+Baru sekitar beberapa bulan ini gw nginjekin lagi kaki di kota Kajarta (dibaca: Jakarta). Sebelumnya? Empat tahun penuh coy gw bertapa sekaligus kerja di resort bintang 5 di area Banten — **Novus Jiva Villa Resort & Spa**. Sounds fancy? Yoi pastinya. 
+Tapi lu bayangin dah — empat tahun hidup di lingkungan resort, jauh dari hype, jauh dari keramaian. Literally jadi orang yang ghost dari ekosistem. Ghost banget gak tuh.
+ 
+Gw emang tipikal orang **selengean** — gak pernah mau muncul ke permukaan di komunitas (udah bosen soalnya cing dari 2010 jadi artis demit maya jaman Yogyacarderlink kwkwkwkwk). Sekarang gw cuma pengen jadi orang yang slow dan bebas. Kerja di balik layar. Dan senang aja gitu hidupnya. 
+
+## Dijebak Lewat Chat — Klasik Banget ngehe!
+
+Sampe suatu Kamis sore, gw Lagi santai, nungguin buka puasa — tiba-tiba masuk pesan dari **Ketua HITA Banten**, Raden Kangmas Yadi Djoyodiningrat Mangku Bumi Gagah Perkasa — nama artisnya: **Yadie Wong** 
+ 
+**_centrung_** HP gw bunyi...
+
+<ImageWithCaption
+  src="/images/articles/chatpaketu.png"
+  caption="Chat dari Paketu Yadie Wong"
+/>
+ 
+_Jiiirrrr._ Gw Langsung mikir — wuiiiih ada apa nih dicari sama Pak President HITA Indonesia? 
+ 
+Dan gak lama dari itu, bener aja...
+ 
+**_centrung_** HP gw bunyi lagi...
+
+<ImageWithCaption
+  src="/images/articles/chatpakpres.png"
+  caption="Chat dari Pakpress Faisal Amir"
+/>
+ 
+Yap. **Kanjeng Ndoro Faisal Amir** — Ketua HITA Indonesia alias pakpress — ngechat gw juga. Dari situ kita janjian untuk ketemuan sekaligus ngopi.
+ 
+Kapan lagi yekan diajakin pakpress ngopi??? gaskeun lah.
+ 
+---
+ 
+## Tugas Berat itu Namanya: Web System HITA Indonesia
+ 
+Setelah ngobrol panjang bareng pakpress, ternyata beliau lagi nyari orang yang mau membangun dan develop websitenya HITA Indonesia — yang dimana nanti **seluruh anggota HITA Indonesia akan teregister di sana**.
+ 
+**ANJRIT!** Tugas berat nih.
+ 
+Dari situ gw langsung jelasin dan bilang resources serta kebutuhan apa aja yang diperluin untuk membangun web system itu. Karena ini gak bisa bercanda — menyangkut banyak data orang yang akan tersimpan. Apalagi disana datanya para suhu IT hotel (Siap hu!). Sensitif, penting, harus solid dari pondasi.
+ 
+Singkat cerita, pakpres menyanggupi segala yang gw butuhin. Dan di perjalanan pulang... gw sempat ngumpat dalam hati:
+ 
+> _"Yadi ngehe — gw kena jebak!"_ 😂
+
+Tapi ini bukan masalah nominal ataupun apapun itu. Ini masalah **integritas** dengan apa yang akan gw develop. Gak mungkin gw buatin website dengan WordPress biasa, apalagi pake Lovable! No way!! kwkwkwkwk   
+ 
+Gw mikir terus gimana cara bangun system yang: 
+- **Scalable**
+- **Secure**
+- **Maintainable**
+- Dan cukup **fleksibel** buat organisasi sebesar HITA
+ 
+Gimana caranya gw bikin ini dengan ekspektasi pakpres yang tinggi? Sampe rumah — langsung buka laptop dan buka-buka lagi semua isi data **primbon** yang pernah gw buat: kumpulan snippet, pattern, boilerplate code, segala jenis mantera yang udah gw kumpulin dari beberapa project freelance dulu.
+ 
+Dan… **BOOM!** Gw nemu konsep yang cocok.
+ 
+---
+ 
+## Gw develop ini — Gw Mulai dari Backend
+ 
+Kalau kebanyakan orang bikin website mulai dari UI... **Kalau Gw kebalik.** (emang agak laen gw mah)
+ 
+Gw mulai dari: **backend structure**. Karena frontend (UI) itu sih gampang bisa berubah dan customize. Tapi **architecture system itu fondasi bung!!**
+ 
+<Timeline>
+  <TimelineItem step="01" title="Backend Architecture">
+    Rancang structure backend — database schema, API design, auth system, role management untuk member HITA.
+  </TimelineItem>
+
+  <TimelineItem step="02" title="Kolaborasi Web Structure">
+    Ngontak temen yang jago main di web structure. Suhu dari segala suhu web structure — terutama untuk sistem yang skalanya gede.
+  </TimelineItem>
+
+  <TimelineItem step="03" title="Frontend — Primbon Time">
+    Buka code primbon lama, poles dikit sana-sini. Bukan nyontek ye ataupun vibecoding kek developer web sebelah dari lovable — tapi ini gw namanya **reuse**. Efisien.
+  </TimelineItem>
+
+  <TimelineItem status title="Akhirnya Structure Terbangun" isLast>
+    Fondasi solid. Member registry, auth flow, dan core structure udah jalan. Sisanya tinggal diisi konten dan fitur.
+  </TimelineItem>
+</Timeline>
+ 
+```javascript
+// core mindset waktu ngebangun ini
+// kalau gw mau bikin sesuatu yang serius,
+// mulai dari yang gak keliatan dulu.
+ 
+function buildWithIntegrity() {
+  const priorities = [
+    "data security first",
+    "scalable architecture",
+    "clean code > fast code",
+    "wordpress shortcut",  // Sorry yeeee gak level kwkwkwkk
+  ];
+ 
+  return priorities.forEach(p => implement(p));
+}
+ 
+// karena ini data dapur IT hotel.
+```
+ 
+---
+ 
+## Stack-nya? Gw pake Bukan yang Kaleng-Kaleng, CUY!
+ 
+Oke ini bagian yang seru bikin lo pada nanya-nanya. Jadi bukan dari hasil vibecoding kek tetangga sebelah dari lovable. Nih gw breakdown dah semuanya. Bukan buat pamer — tapi buat **show off aje** 😌 (kidding).
+Tapi serius, Ini setiap pilihan yang gw pake ada alasannya, dan semuanya dipilih berdasarkan kebutuhan project ini.
+ 
+<TechSection title="Frontend" iconBg="bg-blue-100 dark:bg-blue-900/30" iconColor="text-blue-600 dark:text-blue-400">
+  <TechCard 
+    title="Next.js 16"
+    description="App Router + Server Components + ISR. Halaman publik di-cache, revalidasi 60 detik. Static speed, data tetap fresh."
+  />
+  <TechCard 
+    title="TypeScript 5"
+    description="Strict mode. Bukan optional — ini required. Type safety dari API response sampe UI props."
+  />
+  <TechCard 
+    title="Tailwind CSS v4"
+    description="Utility-first. Gak ada custom CSS yang gak perlu. Konsisten dari komponen terkecil sampe halaman terbesar."
+  />
+  <TechCard 
+    title="Zustand + TanStack Query v5"
+    description="Zustand buat global state yang simpel. TanStack buat server state, caching, dan background refetching."
+  />
+  <TechCard 
+    title="React Hook Form + Zod"
+    description="Validasi form yang serius. Schema Zod jadi single source of truth — dipakai di frontend dan backend sekaligus."
+  />
+  <TechCard 
+    title="Embla + Swiper + dnd-kit"
+    description="Carousel publik pake Embla/Swiper. Drag & drop sortable di admin panel pake dnd-kit. Masing-masing sesuai kebutuhan."
+  />
+</TechSection>
+ 
+<TechSection title="Backend & Database" iconBg="bg-red-100 dark:bg-red-900/30" iconColor="text-red-600 dark:text-red-400">
+  <TechCard 
+    title="Supabase"
+    description="PostgreSQL + Auth + Storage + Realtime. Satu platform handle semuanya. Region Singapore buat latency rendah ke Indonesia."
+  />
+  <TechCard 
+    title="AES-256-GCM Encryption"
+    description="Data PII anggota member gw enkripsi dulu sebelum masuk DB. IV random per-encrypt. HMAC-SHA256 buat lookup. Standard overkill ini cuy!."
+  />
+  <TechCard 
+    title="Resend SDK"
+    description="Email transaksional — konfirmasi daftar member, notif akun aktif, ticket event. Server-side only, API key tidak pernah expose ke client."
+  />
+  <TechCard 
+    title="pdf-lib + PDFKit"
+    description="Generate PDF ticket event server-side. Include QR code unik per registrasi — bisa di-scan langsung buat check-in on-the-spot."
+  />
+  <TechCard 
+    title="ExcelJS + qrcode"
+    description="Export data member ke Excel per-regional, format kolom clean. QR code di-generate untuk setiap tiket event."
+  />
+  <TechCard 
+    title="Cloudflare Turnstile"
+    description="Anti-spam di contact form dan registrasi. Lebih friendly dari reCAPTCHA, privacy-first, dan gak nyiksain user."
+  />
+</TechSection>
+
+<AIHighlightCard title="AI Agent — MHITA.AI">
+  MHITA.AI adalah AI assistant yang bisa diakses member di portal. Dua mode: **Voice** (ngomong langsung, AI jawab pake suara + avatar bergerak) dan **Text** (chat biasa, lebih cepet karena bypass audio pipeline). Service Python terpisah yang jalan bareng via Docker Compose. Middleware transport-nya pake **LiveKit** (WebRTC), dan otak utamanya? Gw pake **R.A.V.A**, Custom LLM yang udah gw tunning.
+</AIHighlightCard>
+ 
+Biar agent AI gak cuma bisa ngobrol doang tapi juga **actionable**, gw inject beberapa tool yang gw define di `tools.py`. Ini yang ngejembatanin reasoning dengan OS server dan dunia luar.
+ 
+### Docker Multi-Stage Build Cuy!
+ 
+Production build gw pake **standalone output** Next.js — yang dimana image akhirnya jauh lebih kecil karena cuma include file yang beneran dibutuhin buat run app, bukan seluruh `node_modules`.
+ 
+---
+ 
+## Setup VPS Sendiri — Gw Ngelola Server Kayak DevOps Beneran, Cok!
+ 
+Nah ini yang kadang bikin orang ngerasa ini lebay — tapi kenyataannya ini salah satu bagian yang paling gw perhatiin di project ini. Istilah kerennya: **Self-Hosted Deployment**.
+Jadi Project ini gak pake platform kayak Vercel, Railway, atau Heroku yang tinggal klik-klik deploy. Dan VPS dedicated ini yang gw butuhin dan di support oleh Nusanode.com (Om Dyan), setup servernya dari nol — OS, Nginx, Docker, SSL, firewall, semuanya handle sendiri.
+ 
+### Kenapa Repot-Repot?
+ 
+**Reasonnya Kontrol penuh.** Jadi gw gak numpang di platform pihak ketiga yang gak jelas lokasinya. Dan secara biaya jangka panjang, VPS dedicated jauh lebih efisien untuk traffic yang udah bisa diprediksi.
+ 
+### Infrastructure Architecture
+ 
+<InfraDiagram />
+ 
+Dua container jalan di satu Docker network — `hitaid-web` (Next.js app) dan `hitaid-agent` (Python AI agent). Dipisah biar kalau agent-nya restart atau crash, website utama tetap jalan normal tanpa gangguan.
+ 
+Next.js di-build pake standalone output — image Docker-nya jadi ringan banget karena cuma include file yang beneran dibutuhin, bukan seluruh `node_modules`.
+ 
+```dockerfile
+# docker multi-stage build — production image
+ 
+# install deps
+FROM node:20-alpine AS deps
+RUN npm ci --no-audit --prefer-offline
+ 
+# build Next.js
+FROM node:20-alpine AS builder
+COPY --from=deps /app/node_modules ./node_modules
+RUN NODE_ENV=production npm run build
+ 
+# runner: standalone output aja, bukan .next semua
+FROM node:20-alpine AS runner
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+USER nextjs
+CMD ["node", "server.js"]
+```
+ 
+Dan satu hal yang gw pelajarin dari setup ini: **audit trail** itu penting banget. Semua aksi admin dicatat ke tabel `admin_audit_logs` dengan data sebelum dan sesudah perubahan dalam format JSON. Kalau ada yang iseng ngubah data member — langsung ketauan siapa, kapan, dan apa yang diubah.
+ 
+### TLDR Infra Setup
+ 
+VPS dedicated + Docker Compose + Nginx reverse proxy + Supabase Cloud Singapore. Semua container terisolasi. SSL otomatis. Karena gw orangnya selengean tapi inget cuy tagline gw **"From Code to Launch, Start with Security"** 😌
+ 
+---
+ 
+## Code Snippets
+ 
+### Enkripsi AES-256-GCM — Data Anggota
+ 
+IV-nya di-random setiap kali encrypt, jadi ciphertext-nya selalu beda meskipun plaintext sama. Ini penting supaya kalau database bocor, attacker gak bisa tau dua member punya email yang sama cuma dari ngebandingin ciphertext.
+ 
+```typescript
+// lib/crypto.ts
+export function encrypt(plaintext: string | null | undefined): string | null {
+  if (!plaintext) return null;
+  const key = getKey(); // 32-byte key dari env (64-char hex)
+  const iv = randomBytes(12); // 96-bit IV — recommended untuk AES-GCM
+  const cipher = createCipheriv("aes-256-gcm", key, iv);
+  const encrypted = Buffer.concat([
+    cipher.update(plaintext, "utf8"),
+    cipher.final(),
+  ]);
+  const authTag = cipher.getAuthTag(); // integrity check — 128-bit
+  
+  // Simpan sebagai: <iv>:<authTag>:<ciphertext>
+  return `${iv.toString("hex")}:${authTag.toString("hex")}:${encrypted.toString("hex")}`;
+}
+```
+ 
+### RBAC — Permission Matrix
+ 
+Semua permission dikontrol di satu file sebagai source of truth. Baik API route maupun UI pakai helper yang sama — UI cuma secondary layer, bukan yang utama.
+ 
+```typescript
+// lib/rbac.ts
+export const ROLE_PERMISSIONS = {
+  superadmin: [
+    "manage_users", "manage_roles", "manage_regions",
+    "manage_members", "manage_events", "manage_gallery",
+    "manage_settings", "export_members", "delete_any",
+    "publish_content", "review_content", "grant_editor",
+  ],
+  admin_regional: [
+    "manage_members",   // hanya region sendiri
+    "manage_articles",  "manage_events",
+    "manage_gallery",   // hanya region sendiri
+    "manage_regions",   // bisa lihat semua, update hanya punya sendiri
+    "export_members",   // hanya region sendiri
+    "publish_content",  "delete_any",
+  ],
+  user: [],
+} as const;
+ 
+export function hasPermission(role: string, permission: string): boolean {
+  const perms = (ROLE_PERMISSIONS as Record<string, readonly string[]>)[role] ?? [];
+  return perms.includes(permission);
+}
+```
+ 
+### MITHA.AI Tools Integration
+ 
+Biar MITHA.AI gak cuma bisa ngobrol doang tapi juga actionable, gw inject beberapa tool yang gw define di `tools.py`. Ini yang ngejembatanin reasoning MITHA.AI dengan OS server dan dunia luar.
+MITHA.AI bisa ngebaca webpage, nge-ping server, cek running process, kelola firewall, sampai narik berita terbaru dari portal Indo.
+ 
+```python
+# AI Agent/tools.py (Snippet)
+from livekit.agents import function_tool, RunContext
+import httpx
+from bs4 import BeautifulSoup
+import psutil
+import subprocess
+ 
+# MITHA.AI bisa narik konten full dari website buat dianalisa
+@function_tool
+async def fetch_webpage_content(url: str, context: RunContext) -> str:
+    """Mengambil dan membaca konten dari seluruh halaman webpage."""
+    async with httpx.AsyncClient(timeout=15) as client:
+        response = await client.get(url, follow_redirects=True)
+        soup = BeautifulSoup(response.text, "html.parser")
+        
+        main = soup.find("main") or soup.find("article") or soup.body
+        return main.get_text(separator="\n")[:8000]
+ 
+# MITHA.AI bisa ngecek detail running process buat nangkep resource hogs
+@function_tool
+async def get_running_processes(context: RunContext) -> str:
+    """Gets list of running processes sorted by CPU usage."""
+    procs = sorted(
+        psutil.process_iter(["pid", "name", "cpu_percent", "memory_percent"]),
+        key=lambda p: p.info.get("cpu_percent") or 0,
+        reverse=True,
+    )
+    # Return top 10 processes
+    return str([{
+        "pid": p.info["pid"],
+        "name": p.info["name"],
+        "cpu": p.info["cpu_percent"]
+    } for p in procs[:10]])
+ 
+# Kalo ada process yang nge-hang, MITHA.AI bisa langsung nge-kill!
+@function_tool
+async def kill_process(pid: int, context: RunContext) -> str:
+    """Terminates a process by its PID."""
+    psutil.Process(pid).terminate()
+    return f"Process {pid} terminated successfully."
+ 
+# MITHA.AI juga gw ajarin scraping berita Indo terkini
+@function_tool
+async def get_latest_news(source: str, context: RunContext, max_items: int = 10) -> str:
+    """Gets the latest news headlines from Indonesian news portals."""
+    # ... logic parsing RSS
+    return "BERITA TERKINI..."
+ 
+# Gw daftarin SEMUA fungsinya ke otak engine MITHA.AI
+ALL_TOOLS = [
+    open_url, search_web, fetch_webpage_content, read_file,
+    calculate, convert_units, translate_text, summarize_text,
+    get_system_info, get_running_processes, kill_process,
+    ping_host, check_port, get_network_interfaces,
+    dns_lookup, traceroute, check_open_ports,
+    get_failed_logins, check_firewall_status, check_service_status,
+    restart_service, get_installed_packages, read_system_logs, 
+    search_log_for_errors, get_latest_news, search_news,
+]
+```
+ 
+Ini yang bikin beda. MITHA.AI bukan sekedar AI biasa, tapi beneran **Agent AI** yang punya "tangan" buat execute commands, baca logs server (`read_system_logs`), ngecek network (`traceroute`), dan nge-report balik. 
+ 
+### Docker Multi-Stage Build
+ 
+Production build pake standalone output Next.js — image akhirnya jauh lebih kecil karena cuma include file yang beneran dibutuhin buat run app, bukan seluruh `node_modules`.
+ 
+```dockerfile
+# Stage 1 — Install deps dulu
+FROM node:20-alpine AS deps
+RUN npm ci --no-audit --prefer-offline
+ 
+# Stage 2 — Build Next.js
+FROM node:20-alpine AS builder
+COPY --from=deps /app/node_modules ./node_modules
+RUN NODE_ENV=production npm run build
+ 
+# Stage 3 — Runner, copy standalone output aja
+FROM node:20-alpine AS runner
+# Bukan copy semua .next — cuma standalone + static
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+USER nextjs
+EXPOSE 3000
+CMD ["node", "server.js"]
+```
+ 
+---
+ 
+## Yang Gw Pelajarin dari Project Ini
+ 
+Kalo lu tanya apa yang paling berkesan dari build ini — bukan soal teknologinya. Bukan soal stack-nya. Bukan soal nominalnya. Tapi soal **tanggung jawab** yang dateng bareng kepercayaan. Pakpress dan HITA percayain gw untuk ngehandle data ratusan atau bahkan nanti akan mencapai ribuan suhu IT hotel di seluruh Indonesia. Itu bukan hal kecil. Dan justru dari situlah gw sadar: 
+ 
+> **Integrity dalam software development bukan cuma soal nulis code yang bagus — tapi soal lo sadar bahwa di balik setiap baris code lu, ada orang beneran yang datanya lu pegang.**
+ 
+Dan buat **Paketu Yadie Wong** — iya, lo emang ngehe. Tapi gw gak nyesel dijebak. 😂
+
+<QuoteCard 
+  text="Jangan pernah underestimate sebuah project hanya karena kelihatannya simpel dari luar."
+  author="LESSON LEARNED, FROM A SELENGEAN DEVELOPER 😂"
+/>
+ 
+---
+
+> NB : Kalau om Dyan baca mungkin mau kasih domain saya yang udah mau expired nih om 😂 kwkwkwkwk!
