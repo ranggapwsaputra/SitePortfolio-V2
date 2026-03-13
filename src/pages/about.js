@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import Head from 'next/head'
+import SEO from '@/components/SEO'
 import AnimatedText from '../components/AnimatedText'
 import Layout from '@/components/Layout'
 import Image from 'next/image'
@@ -44,10 +44,11 @@ useEffect(() => {
 const About = () => {
   return (
     <>
-      <Head>
-        <title>Rangga Saputra | About Page</title>
-        <meta name="description" content="any description" />
-      </Head>
+      <SEO
+        title="About"
+        description="I'm Rangga Saputra — IT Manager & Head of IT with 10+ years specializing in network infrastructure, cybersecurity, and web development in hospitality industry."
+        canonicalUrl="https://ranggapwsaputra.com/about"
+      />
       <EffectTransition />
 
       <main className="flex w-full flex-col items-center justify-center dark:text-light">

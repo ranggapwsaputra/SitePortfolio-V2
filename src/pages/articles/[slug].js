@@ -5,7 +5,7 @@ import rehypeHighlight from 'rehype-highlight';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import Layout from '@/components/Layout';
-import Head from 'next/head';
+import SEO from '@/components/SEO';
 import { redis } from '@/lib/redis';
 import ArticleBannerImage from '@/components/ArticleBannerImage';
 import Link from 'next/link';
@@ -46,12 +46,22 @@ export default function Article({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const ogImage = frontmatter.coverImage
+    ? `https://ranggapwsaputra.com${frontmatter.coverImage}`
+    : undefined;
+
+  const articleTags = Array.isArray(frontmatter.tags) ? frontmatter.tags : [];
+
   return (
     <>
-      <Head>
-        <title>{`${frontmatter.title} | Rangga Saputra`}</title>
-        <meta name="description" content={frontmatter.description || 'Article by Rangga Saputra'} />
-      </Head>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description || `Article by Rangga Saputra`}
+        ogImage={ogImage}
+        ogType="article"
+        canonicalUrl={`https://ranggapwsaputra.com/articles/${frontmatter.slug}`}
+        articleTags={articleTags}
+      />
 
       <EffectTransition />
       <Layout>

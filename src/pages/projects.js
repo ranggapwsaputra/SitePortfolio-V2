@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
+import SEO from '@/components/SEO'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion';
@@ -108,10 +108,11 @@ const Project = ({ title, type, img, link, githublink }) => {
 const Projects = () => {
   return (
     <>
-      <Head>
-        <title>Rangga Saputra | Projects Page</title>
-        <meta name="description" content="A showcase of development and cybersecurity-focused projects." />
-      </Head>
+      <SEO
+        title="Projects"
+        description="A showcase of development and cybersecurity-focused projects by Rangga Saputra — from web systems to AI agents."
+        canonicalUrl="https://ranggapwsaputra.com/projects"
+      />
       <EffectTransition />
 
       <main className="flex w-full flex-col items-center dark:text-light">

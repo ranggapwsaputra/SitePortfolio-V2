@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import AnimatedText from '@/components/AnimatedText';
@@ -11,10 +11,11 @@ import EffectTransition from '@/components/EffectTransition';
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Rangga Saputra - Personal Website</title>
-        <meta name="description" content="IT Manager" />
-      </Head>
+      <SEO
+        title="Personal Website"
+        description="IT Manager & Cybersecurity Enthusiast. From Code to Launch, Start with Security. Writing about infrastructure, web dev, and security."
+        canonicalUrl="https://ranggapwsaputra.com"
+      />
 
       <EffectTransition />
       <main className="flex w-full flex-col items-center justify-center text-dark dark:text-light">
