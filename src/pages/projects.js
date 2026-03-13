@@ -7,6 +7,7 @@ import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
 import { GithubIcon } from '@/components/Icons'
 import project1 from "../../public/images/projects/dummy-projects.png"
+import projecthita from "../../public/images/projects/webhitaid.png"
 import EffectTransition from '@/components/EffectTransition';
 
 const FramerImage = motion(Image);
@@ -17,16 +18,16 @@ const FeaturedProject = ({ type, title, summary, img, link, githublink }) => {
     <article className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl dark:bg-dark dark:border-light p-12
     lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
     ">
-        <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light dark:text-light  rounded-br-3xl
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light dark:text-light  rounded-br-3xl
         xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]
         ' />
-      
+
 
       <Link href={link} target="_blank" className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full
       ">
-        <FramerImage src={img} alt={title} className="w-full h-auto" 
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
+        <FramerImage src={img} alt={title} className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
         />
       </Link>
 
@@ -59,21 +60,21 @@ const FeaturedProject = ({ type, title, summary, img, link, githublink }) => {
   )
 }
 
-const Project = ({title, type, img, link, githublink}) => {
+const Project = ({ title, type, img, link, githublink }) => {
 
-    return(
+  return (
 
-        <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark
          dark:border-light xs:p-4'>
-            
-            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light dark:border-light  
+
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light dark:border-light  
             rounded-br-3xl md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]
             ' />
-            
-            <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
+
+      <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
         <FramerImage src={img} alt={title} className="w-full h-auto" priority size="(max-width: 768px) 100vw), (max-width: 1200px) 50vw, 33vw"
-                          whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
         />
       </Link>
 
@@ -86,7 +87,7 @@ const Project = ({title, type, img, link, githublink}) => {
 
 
         <div className="w-full mt-2 flex items-center justify-between">
-            
+
           <Link
             href={link}
             target="_blank"
@@ -100,8 +101,8 @@ const Project = ({title, type, img, link, githublink}) => {
 
         </div>
       </div>
-        </article>
-    )
+    </article>
+  )
 }
 
 const Projects = () => {
@@ -121,17 +122,17 @@ const Projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="🚧 This project is currently being updated. Stay tuned!"
-                summary="App using React, Tailwind CSS, Context API, React Router, and Recharts.."
-                img={project1}
-                link="/"
+                title="HITA - Indonesia"
+                summary="Next.js, Tailwind CSS,  TanStack React Query v5, AI Agent, VPS dedicated"
+                img={projecthita}
+                link="https://hita-id.org"
                 githublink="/"
                 type="Featured Project"
               />
             </div>
 
             <div className="col-span-6 sm:col-span-12">
-                <Project
+              <Project
                 title="🚧 This project is currently being updated. Stay tuned!"
                 summary="App using React, Tailwind CSS, Context API, React Router, and Recharts.."
                 img={project1}
@@ -141,7 +142,7 @@ const Projects = () => {
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
-                <Project
+              <Project
                 title="🚧 This project is currently being updated. Stay tuned!"
                 summary="App using React, Tailwind CSS, Context API, React Router, and Recharts.."
                 img={project1}
@@ -151,7 +152,7 @@ const Projects = () => {
               />
             </div>
             <div className="col-span-12">
-                <FeaturedProject
+              <FeaturedProject
                 title="🚧 This project is currently being updated. Stay tuned!"
                 summary="App using React, Tailwind CSS, Context API, React Router, and Recharts.."
                 img={project1}
@@ -161,7 +162,7 @@ const Projects = () => {
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
-                <Project
+              <Project
                 title="🚧 This project is currently being updated. Stay tuned!"
                 summary="App using React, Tailwind CSS, Context API, React Router, and Recharts.."
                 img={project1}
@@ -171,7 +172,7 @@ const Projects = () => {
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
-                <Project
+              <Project
                 title="🚧 This project is currently being updated. Stay tuned!"
                 summary="App using React, Tailwind CSS, Context API, React Router, and Recharts.."
                 img={project1}
