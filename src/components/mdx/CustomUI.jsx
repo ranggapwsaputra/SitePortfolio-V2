@@ -98,7 +98,7 @@ export const AIHighlightCard = ({ title, children }) => {
       </div>
       <div className="bg-amber-50/60 dark:bg-neutral-800/40 border border-amber-200/60 dark:border-neutral-700/50 rounded-xl p-6">
         <div className="text-[11px] font-mono font-bold tracking-[0.2em] text-amber-600/80 dark:text-amber-400/60 mb-3 uppercase italic">
-          // YANG PALING SERU DI-BUILD - BIKIN TETANGGA GAK PUNYA :p
+          {"// YANG PALING SERU DI-BUILD - BIKIN TETANGGA GAK PUNYA :p"}
         </div>
         <div className="text-neutral-700 dark:text-neutral-300 text-[14.5px] leading-relaxed font-sans">
           {children}
